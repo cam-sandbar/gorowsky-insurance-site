@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insurance Blog | Gorowsky Insurance | Baldwin County & Mobile AL</title>
+  <meta name="description" content="Insurance tips, guides, and local advice for Baldwin County and Mobile County homeowners and drivers. From Gorowsky Insurance in Daphne, AL.">
+  <link rel="canonical" href="https://gorowskyinsurance.com/blog/">
+  <meta property="og:title" content="Insurance Blog | Gorowsky Insurance">
+  <meta property="og:description" content="Local insurance guidance for Baldwin County and Mobile County, Alabama.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="https://res.cloudinary.com/dg8kvnrpj/image/upload/q_auto/f_auto/v1778014166/GI_favicon_mpiivo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: 'Inter', sans-serif; color: #1C1C1E; background: #FFFFFF; overflow-x: hidden; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    #nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: #FFFFFF; border-bottom: 1px solid #E2E5EA; transition: box-shadow 0.3s ease; }
+    #nav.scrolled { box-shadow: 0 2px 14px rgba(27,58,107,0.12); }
+    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 70px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.2rem; color: #1B3A6B; }
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nav-links a { font-size: 0.875rem; font-weight: 500; color: #1C1C1E; transition: color 0.2s; }
+    .nav-links a:hover { color: #2563EB; }
+    .nav-cta { background: #2563EB; color: #FFFFFF !important; padding: 10px 20px; border-radius: 6px; font-weight: 600 !important; transition: background 0.2s; display: inline-block; }
+    .nav-cta:hover { background: #1d52d4 !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; border: none; background: none; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: #1B3A6B; border-radius: 2px; transition: transform 0.3s ease, opacity 0.3s ease; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu { display: none; flex-direction: column; background: #FFFFFF; border-top: 1px solid #E2E5EA; padding: 8px 24px 20px; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-size: 1rem; font-weight: 500; color: #1C1C1E; padding: 13px 0; border-bottom: 1px solid #F4F5F7; transition: color 0.2s; }
+    .mobile-menu a:hover { color: #2563EB; }
+    .mobile-menu .mobile-cta { border-bottom: none; margin-top: 12px; background: #2563EB; color: #FFFFFF; text-align: center; padding: 14px; border-radius: 6px; font-weight: 600; }
+    @media (max-width: 768px) { .nav-links { display: none; } .hamburger { display: flex; } }
+
+    .page-header { background: #1B3A6B; padding: 80px 24px 64px; margin-top: 70px; text-align: center; }
+    .page-header h1 { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: clamp(1.8rem,4vw,2.6rem); color: #FFFFFF; letter-spacing: -0.01em; text-transform: uppercase; margin-bottom: 14px; }
+    .page-header p { font-size: 1.05rem; color: rgba(255,255,255,0.78); line-height: 1.7; max-width: 580px; margin: 0 auto; }
+
+    .blog-wrap { max-width: 1200px; margin: 0 auto; padding: 72px 24px; display: grid; grid-template-columns: 1fr 300px; gap: 64px; align-items: start; }
+    @media (max-width: 960px) { .blog-wrap { grid-template-columns: 1fr; } }
+
+    .blog-grid { display: flex; flex-direction: column; gap: 36px; }
+
+    .post-card { display: grid; grid-template-columns: 280px 1fr; gap: 28px; background: #FFFFFF; border-radius: 12px; border: 1px solid #E2E5EA; overflow: hidden; transition: box-shadow 0.25s ease, transform 0.25s ease; }
+    .post-card:hover { box-shadow: 0 12px 36px rgba(27,58,107,0.12); transform: translateY(-3px); }
+    .post-card-img { height: 100%; min-height: 200px; object-fit: cover; width: 100%; }
+    .post-card-body { padding: 28px 28px 28px 0; display: flex; flex-direction: column; }
+    .post-cat { font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #2563EB; margin-bottom: 10px; }
+    .post-card-body h2 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.1rem; color: #1C1C1E; line-height: 1.4; margin-bottom: 12px; }
+    .post-card-body h2 a { color: inherit; transition: color 0.2s; }
+    .post-card-body h2 a:hover { color: #2563EB; }
+    .post-card-body p { font-size: 0.93rem; line-height: 1.75; color: #555; flex: 1; margin-bottom: 20px; }
+    .post-read-more { display: inline-block; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: #2563EB; transition: color 0.2s; }
+    .post-read-more:hover { color: #1d52d4; }
+    .post-date { font-size: 0.78rem; color: #999; margin-top: 10px; }
+
+    @media (max-width: 640px) {
+      .post-card { grid-template-columns: 1fr; }
+      .post-card-img { height: 200px; }
+      .post-card-body { padding: 20px; }
+    }
+
+    .blog-sidebar { position: sticky; top: 90px; display: flex; flex-direction: column; gap: 24px; }
+    .sidebar-widget { background: #F4F5F7; border-radius: 12px; padding: 28px; }
+    .sidebar-widget h3 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: #888; margin-bottom: 18px; }
+    .widget-cta { background: #1B3A6B; border-radius: 12px; padding: 28px; }
+    .widget-cta h3 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1rem; color: #FFFFFF; margin-bottom: 10px; }
+    .widget-cta p { font-size: 0.88rem; color: rgba(255,255,255,0.72); line-height: 1.65; margin-bottom: 20px; }
+    .widget-btn { display: block; background: #2563EB; color: #FFFFFF; text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 14px; border-radius: 8px; transition: background 0.2s; }
+    .widget-btn:hover { background: #1d52d4; color: #FFFFFF; }
+    .cat-list { list-style: none; }
+    .cat-list li { padding: 9px 0; border-bottom: 1px solid #E2E5EA; }
+    .cat-list li:last-child { border-bottom: none; }
+    .cat-list a { font-size: 0.9rem; color: #444; transition: color 0.2s; }
+    .cat-list a:hover { color: #2563EB; }
+
+    #footer { background: #1C1C1E; color: #FFFFFF; padding: 64px 24px 32px; }
+    .footer-top { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.4fr 1fr 1.2fr; gap: 56px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .footer-brand-name { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.1rem; color: #FFFFFF; margin-bottom: 10px; }
+    .footer-tagline { font-size: 0.88rem; color: rgba(255,255,255,0.5); line-height: 1.65; }
+    .footer-col h4 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 18px; }
+    .footer-nav-list { list-style: none; }
+    .footer-nav-list li { margin-bottom: 10px; }
+    .footer-nav-list a { font-size: 0.88rem; color: rgba(255,255,255,0.7); transition: color 0.2s; }
+    .footer-nav-list a:hover { color: #FFFFFF; }
+    .footer-contact-info p, .footer-contact-info a { font-size: 0.88rem; color: rgba(255,255,255,0.7); line-height: 1.9; display: block; transition: color 0.2s; }
+    .footer-contact-info a:hover { color: #FFFFFF; }
+    .footer-bottom { max-width: 1200px; margin: 24px auto 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+    .footer-social a { display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; color: rgba(255,255,255,0.5); transition: color 0.2s; }
+    .footer-social a:hover { color: #FFFFFF; }
+    .footer-social svg { width: 17px; height: 17px; fill: currentColor; }
+    @media (max-width: 768px) { .footer-top { grid-template-columns: 1fr; gap: 40px; } .footer-bottom { flex-direction: column; align-items: flex-start; } }
+  </style>
+</head>
+<body>
+  <header id="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Gorowsky Insurance</a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/alabama-auto-insurance/">Auto</a></li>
+          <li><a href="/alabama-home-insurance/">Home</a></li>
+          <li><a href="/alabama-business-insurance/">Business</a></li>
+          <li><a href="/alabama-life-insurance/">Life</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/#quote" class="nav-cta">Get a Quote</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="/" class="mobile-link">Home</a>
+      <a href="/alabama-auto-insurance/" class="mobile-link">Auto Insurance</a>
+      <a href="/alabama-home-insurance/" class="mobile-link">Home Insurance</a>
+      <a href="/alabama-business-insurance/" class="mobile-link">Business Insurance</a>
+      <a href="/alabama-life-insurance/" class="mobile-link">Life Insurance</a>
+      <a href="/blog/" class="mobile-link">Blog</a>
+      <a href="/#quote" class="mobile-link mobile-cta">Get a Quote</a>
+    </nav>
+  </header>
+
+  <div class="page-header">
+    <h1>Insurance Insights</h1>
+    <p>Local guidance for Baldwin County and Mobile County homeowners, drivers, and business owners from Gorowsky Insurance.</p>
+  </div>
+
+  <div class="blog-wrap">
+    <main class="blog-grid">
+
+      <article class="post-card">
+        <img class="post-card-img" src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=600&q=80" alt="Alabama auto liability insurance" loading="lazy">
+        <div class="post-card-body">
+          <p class="post-cat">Auto Insurance</p>
+          <h2><a href="/blog/what-does-auto-liability-insurance-cover-alabama/">What Does Auto Liability Insurance Actually Cover in Alabama?</a></h2>
+          <p>Many Alabama drivers think liability insurance protects them. In reality, it primarily protects other people from you. Here is what it actually covers and what gaps to watch for.</p>
+          <a href="/blog/what-does-auto-liability-insurance-cover-alabama/" class="post-read-more">Read More &rsaquo;</a>
+          <p class="post-date">April 30, 2026</p>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <img class="post-card-img" src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=600&q=80" alt="Alabama minimum auto insurance requirements" loading="lazy">
+        <div class="post-card-body">
+          <p class="post-cat">Auto Insurance</p>
+          <h2><a href="/blog/minimum-auto-insurance-requirements-alabama-2026/">Minimum Auto Insurance Requirements in Alabama (2026 Guide)</a></h2>
+          <p>Alabama requires every driver to carry auto insurance, but the state minimum is designed to meet legal requirements, not to fully protect you. Here is what the law requires and what it means in real life.</p>
+          <a href="/blog/minimum-auto-insurance-requirements-alabama-2026/" class="post-read-more">Read More &rsaquo;</a>
+          <p class="post-date">April 30, 2026</p>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <img class="post-card-img" src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80" alt="Baldwin County Alabama home upgrades insurance savings" loading="lazy">
+        <div class="post-card-body">
+          <p class="post-cat">Home Insurance</p>
+          <h2><a href="/blog/how-small-upgrades-baldwin-county-save-on-homeowners-insurance/">How Small Upgrades to Your Home in Baldwin County Can Earn Big Savings on Your Homeowners Insurance</a></h2>
+          <p>If you own a home in Daphne, Foley, Fairhope, Robertsdale, Gulf Shores, or Orange Beach, small strategic upgrades can stack together to meaningfully lower your premium.</p>
+          <a href="/blog/how-small-upgrades-baldwin-county-save-on-homeowners-insurance/" class="post-read-more">Read More &rsaquo;</a>
+          <p class="post-date">March 19, 2026</p>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <img class="post-card-img" src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80" alt="Bundling home and auto insurance Alabama" loading="lazy">
+        <div class="post-card-body">
+          <p class="post-cat">Home Insurance / Auto Insurance</p>
+          <h2><a href="/blog/why-bundling-home-auto-insurance-alabama/">Why Bundling Home and Auto Insurance Makes Sense in Alabama (And When It Does Not)</a></h2>
+          <p>Bundling home and auto insurance can save you money in Baldwin County, but it is not always the right move. Here is the honest breakdown of when it works and when it does not.</p>
+          <a href="/blog/why-bundling-home-auto-insurance-alabama/" class="post-read-more">Read More &rsaquo;</a>
+          <p class="post-date">March 19, 2026</p>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <img class="post-card-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="Baldwin County Alabama homeowner deductibles" loading="lazy">
+        <div class="post-card-body">
+          <p class="post-cat">Home Insurance</p>
+          <h2><a href="/blog/right-deductibles-baldwin-county-alabama-homeowner/">The Right Deductibles for a Baldwin County, Alabama Homeowner</a></h2>
+          <p>Flat vs. percentage deductibles explained. Choosing the right deductible is one of the most misunderstood parts of homeowners insurance in Baldwin County.</p>
+          <a href="/blog/right-deductibles-baldwin-county-alabama-homeowner/" class="post-read-more">Read More &rsaquo;</a>
+          <p class="post-date">March 19, 2026</p>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <img class="post-card-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Home insurance discounts Baldwin County Alabama" loading="lazy">
+        <div class="post-card-body">
+          <p class="post-cat">Home Insurance</p>
+          <h2><a href="/blog/10-home-insurance-discounts-homeowners-dont-know/">10 Home Insurance Discounts Most Homeowners Do Not Know They Qualify For</a></h2>
+          <p>Many Gulf Coast homeowners are overpaying because they are not taking advantage of discounts they already qualify for. Gorowsky Insurance regularly finds 10 to 40 percent in missed savings just by reviewing policies.</p>
+          <a href="/blog/10-home-insurance-discounts-homeowners-dont-know/" class="post-read-more">Read More &rsaquo;</a>
+          <p class="post-date">March 19, 2026</p>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <img class="post-card-img" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Fortified roof Alabama insurance savings" loading="lazy">
+        <div class="post-card-body">
+          <p class="post-cat">Home Insurance</p>
+          <h2><a href="/blog/how-fortified-roof-saves-money-alabama/">How a Fortified Roof Can Save You Money in Alabama</a></h2>
+          <p>If you own a home along the Alabama Gulf Coast, a FORTIFIED roof is one of the best ways to protect your home and dramatically reduce your insurance costs. Here is how it works.</p>
+          <a href="/blog/how-fortified-roof-saves-money-alabama/" class="post-read-more">Read More &rsaquo;</a>
+          <p class="post-date">March 11, 2026</p>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <img class="post-card-img" src="https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=600&q=80" alt="Filing a home insurance claim after a storm Alabama" loading="lazy">
+        <div class="post-card-body">
+          <p class="post-cat">Home Insurance</p>
+          <h2><a href="/blog/after-storm-file-home-insurance-claim-right-way/">After the Storm: How to File a Home Insurance Claim the Right Way</a></h2>
+          <p>When a major storm hits the Gulf Coast, homeowners often rush to file a claim without knowing the right steps. Filing incorrectly can slow down the process or lead to a reduced payout.</p>
+          <a href="/blog/after-storm-file-home-insurance-claim-right-way/" class="post-read-more">Read More &rsaquo;</a>
+          <p class="post-date">March 11, 2026</p>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <img class="post-card-img" src="https://images.unsplash.com/photo-1601134467661-3d775b999c18?w=600&q=80" alt="Heat and humidity home insurance Alabama" loading="lazy">
+        <div class="post-card-body">
+          <p class="post-cat">Home Insurance</p>
+          <h2><a href="/blog/heat-humidity-home-whats-covered-whats-not/">Heat, Humidity, and Your Home: What Is Covered and What Is Not</a></h2>
+          <p>Alabama summers along the Gulf Coast bring real damage risks from heat and humidity. Here is what your homeowners policy typically covers and what it does not.</p>
+          <a href="/blog/heat-humidity-home-whats-covered-whats-not/" class="post-read-more">Read More &rsaquo;</a>
+          <p class="post-date">March 7, 2026</p>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <img class="post-card-img" src="https://images.unsplash.com/photo-1566438480900-0609be27a4be?w=600&q=80" alt="Hurricane prep Baldwin County Mobile County Alabama" loading="lazy">
+        <div class="post-card-body">
+          <p class="post-cat">Home Insurance / Flood Insurance</p>
+          <h2><a href="/blog/hurricane-prep-inland-alabama-baldwin-mobile-county/">Hurricane Prep for Inland Alabama, Baldwin County, and Mobile County: Yes, You Still Need a Plan</a></h2>
+          <p>Even 30 to 50 miles inland, hurricanes and tropical storms routinely bring damaging winds, flooding rain, and fallen trees to Baldwin and Mobile County. Here is what to know.</p>
+          <a href="/blog/hurricane-prep-inland-alabama-baldwin-mobile-county/" class="post-read-more">Read More &rsaquo;</a>
+          <p class="post-date">March 7, 2026</p>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <img class="post-card-img" src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80" alt="Alabama homeowners insurance guide" loading="lazy">
+        <div class="post-card-body">
+          <p class="post-cat">Home Insurance</p>
+          <h2><a href="/blog/homeowners-insurance-in-alabama-what-to-know-slip-ups/">Alabama Homeowners Insurance: What to Know, Where People Slip Up, and How Gorowsky Insurance Makes It Easier</a></h2>
+          <p>A complete guide to homeowners insurance in Alabama covering what a standard policy includes, common mistakes Gulf Coast homeowners make, and how to get the right coverage.</p>
+          <a href="/blog/homeowners-insurance-in-alabama-what-to-know-slip-ups/" class="post-read-more">Read More &rsaquo;</a>
+          <p class="post-date">August 30, 2025</p>
+        </div>
+      </article>
+
+    </main>
+
+    <aside class="blog-sidebar">
+      <div class="widget-cta">
+        <h3>Get a Free Quote</h3>
+        <p>Glen reviews your coverage and shops multiple carriers to find the right fit for your situation.</p>
+        <a href="/#quote" class="widget-btn">Request a Free Quote</a>
+      </div>
+      <div class="sidebar-widget">
+        <h3>Categories</h3>
+        <ul class="cat-list">
+          <li><a href="/blog/">All Posts</a></li>
+          <li><a href="/alabama-home-insurance/">Home Insurance</a></li>
+          <li><a href="/alabama-auto-insurance/">Auto Insurance</a></li>
+          <li><a href="/alabama-business-insurance/">Business Insurance</a></li>
+          <li><a href="/alabama-life-insurance/">Life Insurance</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-widget">
+        <h3>Contact Glen</h3>
+        <a href="tel:2513672599" style="display:block;font-size:0.92rem;color:#1B3A6B;font-weight:600;margin-bottom:8px;">(251) 367-2599</a>
+        <a href="mailto:glen@gorowskyinsurance.com" style="display:block;font-size:0.85rem;color:#2563EB;">glen@gorowskyinsurance.com</a>
+        <p style="font-size:0.8rem;color:#888;margin-top:10px;line-height:1.6;">27154-A Pollard Road<br>Daphne, AL 36526</p>
+      </div>
+    </aside>
+  </div>
+
+  <footer id="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">Gorowsky Insurance, LLC</div>
+        <p class="footer-tagline">Independent insurance agency serving Mobile and Baldwin County, Alabama for over 15 years.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul class="footer-nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/alabama-auto-insurance/">Auto Insurance</a></li>
+          <li><a href="/alabama-home-insurance/">Home Insurance</a></li>
+          <li><a href="/alabama-business-insurance/">Business Insurance</a></li>
+          <li><a href="/alabama-life-insurance/">Life Insurance</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/#quote">Get a Quote</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-info">
+          <p>27154-A Pollard Road</p>
+          <p>Daphne, AL 36526</p>
+          <a href="tel:2513672599">(251) 367-2599</a>
+          <a href="mailto:glen@gorowskyinsurance.com">glen@gorowskyinsurance.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">2025 Gorowsky Insurance, LLC. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://facebook.com/gorowskyinsurance" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          Facebook
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    var nav = document.getElementById('nav');
+    window.addEventListener('scroll', function() { nav.classList.toggle('scrolled', window.scrollY > 50); }, { passive: true });
+    var hamburger = document.getElementById('hamburger');
+    var mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', function() {
+      var isOpen = hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    document.querySelectorAll('.mobile-link').forEach(function(l) { l.addEventListener('click', function() { hamburger.classList.remove('open'); mobileMenu.classList.remove('open'); }); });
+  </script>
+</body>
+</html>

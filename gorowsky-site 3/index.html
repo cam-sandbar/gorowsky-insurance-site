@@ -1,0 +1,1713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gorowsky Insurance | Home, Auto and Business Insurance in Daphne, AL</title>
+  <meta name="description" content="Independent insurance agency serving Mobile and Baldwin County, Alabama. Free quotes on home, auto, business, and life insurance. Call (251) 367-2599.">
+  <link rel="canonical" href="https://gorowskyinsurance.com/">
+  <meta property="og:title" content="Gorowsky Insurance | Daphne, AL">
+  <meta property="og:description" content="Home, auto, business, and life insurance for Mobile and Baldwin County. Free quotes. 15 years experience.">
+  <meta property="og:type" content="website">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "InsuranceAgency",
+    "name": "Gorowsky Insurance, LLC",
+    "telephone": "(251) 367-2599",
+    "email": "glen@gorowskyinsurance.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "27154-A Pollard Road",
+      "addressLocality": "Daphne",
+      "addressRegion": "AL",
+      "postalCode": "36526"
+    },
+    "url": "https://gorowskyinsurance.com",
+    "areaServed": ["Mobile County, AL", "Baldwin County, AL"]
+  }
+  </script>
+
+  <link rel="icon" type="image/png" href="https://res.cloudinary.com/dg8kvnrpj/image/upload/q_auto/f_auto/v1778014166/GI_favicon_mpiivo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #1C1C1E;
+      background: #FFFFFF;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    section {
+      scroll-margin-top: 70px;
+    }
+
+    /* ============================================================
+       NAVIGATION
+    ============================================================ */
+    #nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: #FFFFFF;
+      border-bottom: 1px solid #E2E5EA;
+      transition: box-shadow 0.3s ease;
+    }
+
+    #nav.scrolled {
+      box-shadow: 0 2px 14px rgba(27, 58, 107, 0.12);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #1B3A6B;
+      letter-spacing: -0.01em;
+      flex-shrink: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #1C1C1E;
+      transition: color 0.2s;
+      letter-spacing: 0.01em;
+    }
+
+    .nav-links a:hover {
+      color: #2563EB;
+    }
+
+    .nav-cta {
+      background: #2563EB;
+      color: #FFFFFF !important;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 600 !important;
+      font-size: 0.875rem !important;
+      transition: background 0.2s, transform 0.15s;
+      display: inline-block;
+    }
+
+    .nav-cta:hover {
+      background: #1d52d4 !important;
+      color: #FFFFFF !important;
+      transform: translateY(-1px);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      border: none;
+      background: none;
+      flex-shrink: 0;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #1B3A6B;
+      border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .hamburger.open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background: #FFFFFF;
+      border-top: 1px solid #E2E5EA;
+      padding: 8px 24px 20px;
+    }
+
+    .mobile-menu.open {
+      display: flex;
+    }
+
+    .mobile-menu a {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #1C1C1E;
+      padding: 13px 0;
+      border-bottom: 1px solid #F4F5F7;
+      transition: color 0.2s;
+    }
+
+    .mobile-menu a:hover {
+      color: #2563EB;
+    }
+
+    .mobile-menu .mobile-cta {
+      border-bottom: none;
+      margin-top: 12px;
+      background: #2563EB;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 14px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .mobile-menu .mobile-cta:hover {
+      background: #1d52d4;
+      color: #FFFFFF;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    /* ============================================================
+       HERO SECTION
+    ============================================================ */
+    #hero {
+      position: relative;
+      height: 100vh;
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      top: -20%;
+      left: 0;
+      right: 0;
+      bottom: -20%;
+      background-image: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      will-change: transform;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 20, 45, 0.72);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 0 24px;
+      max-width: 820px;
+    }
+
+    .hero-content h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      color: #FFFFFF;
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+      margin-bottom: 22px;
+      text-transform: uppercase;
+    }
+
+    .hero-content p {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      color: rgba(255, 255, 255, 0.97);
+      font-weight: 500;
+      line-height: 1.75;
+      margin-bottom: 40px;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-cta {
+      display: inline-block;
+      background: #2563EB;
+      color: #FFFFFF;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 18px 52px;
+      border-radius: 100px;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 22px rgba(37, 99, 235, 0.45);
+    }
+
+    .hero-cta:hover {
+      background: #1d52d4;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(37, 99, 235, 0.55);
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      animation: indicatorBounce 2.2s ease-in-out infinite;
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    .scroll-indicator svg {
+      width: 30px;
+      height: 30px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    @keyframes indicatorBounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.65; }
+      50% { transform: translateX(-50%) translateY(9px); opacity: 1; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-cta {
+        display: block;
+        text-align: center;
+        padding: 18px 32px;
+      }
+    }
+
+    /* ============================================================
+       TRUST BAR
+    ============================================================ */
+    #trust {
+      background: #1B3A6B;
+      padding: 32px 24px;
+    }
+
+    .trust-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: #FFFFFF;
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .trust-item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .trust-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .trust-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: #FFFFFF;
+      fill: none;
+      stroke-width: 1.75;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .trust-text strong {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.01em;
+      line-height: 1.3;
+    }
+
+    .trust-text span {
+      display: block;
+      font-size: 0.78rem;
+      opacity: 0.7;
+      margin-top: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .trust-inner {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px 16px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .trust-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ============================================================
+       SHARED SECTION UTILITIES
+    ============================================================ */
+    .section-tag {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #2563EB;
+      margin-bottom: 10px;
+    }
+
+    .section-heading {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.75rem, 3.5vw, 2.4rem);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      color: #1C1C1E;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ============================================================
+       SERVICES SECTION
+    ============================================================ */
+    #services {
+      background: #F4F5F7;
+      padding: 96px 24px;
+    }
+
+    .services-header {
+      text-align: center;
+      max-width: 1200px;
+      margin: 0 auto 56px;
+    }
+
+    .services-header .section-sub {
+      font-size: 1.05rem;
+      color: #555;
+      line-height: 1.7;
+      margin: 0 auto;
+    }
+
+    .services-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .service-card {
+      display: block;
+      color: inherit;
+      background: #FFFFFF;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 14px rgba(27, 58, 107, 0.08);
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.55s ease, transform 0.55s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .service-card.visible:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 44px rgba(27, 58, 107, 0.16);
+    }
+
+    .service-photo-wrap {
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+    }
+
+    .service-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+
+    .service-card.visible:hover .service-photo-wrap img {
+      transform: scale(1.04);
+    }
+
+    .service-photo-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(27, 58, 107, 0.84);
+      color: #FFFFFF;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 14px 20px;
+    }
+
+    .service-body {
+      padding: 22px 24px 28px;
+    }
+
+    .service-body p {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #444;
+    }
+
+    @media (max-width: 640px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ============================================================
+       SERVICE AREA SECTION
+    ============================================================ */
+    #area {
+      background: #FFFFFF;
+      padding: 96px 24px;
+    }
+
+    .area-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .area-left p.section-intro {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #444;
+      margin-top: 16px;
+    }
+
+    .area-right {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .area-county h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #2563EB;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #E2E5EA;
+    }
+
+    .area-county ul {
+      list-style: none;
+    }
+
+    .area-county li {
+      font-size: 0.93rem;
+      color: #444;
+      padding: 7px 0;
+      border-bottom: 1px solid #F4F5F7;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .area-county li.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 900px) {
+      .area-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .area-right {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+    /* ============================================================
+       ABOUT SECTION
+    ============================================================ */
+    #about {
+      background: #1B3A6B;
+      padding: 96px 24px;
+    }
+
+    .about-header {
+      text-align: center;
+      max-width: 1200px;
+      margin: 0 auto 60px;
+    }
+
+    .about-header .section-tag {
+      color: rgba(255, 255, 255, 0.55);
+    }
+
+    .about-header .section-heading {
+      color: #FFFFFF;
+    }
+
+    .about-cols {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .about-col {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 32px;
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: left;
+      min-height: 120px;
+    }
+
+    .about-col-text {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .about-col-icon {
+      width: 52px;
+      height: 52px;
+      flex-shrink: 0;
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about-col-icon svg {
+      width: 26px;
+      height: 26px;
+      stroke: #FFFFFF;
+      fill: none;
+      stroke-width: 1.75;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .about-col-text h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: #FFFFFF;
+      margin-bottom: 10px;
+      letter-spacing: 0.01em;
+    }
+
+    .about-col-text p {
+      font-size: 0.93rem;
+      line-height: 1.78;
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .about-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .about-headshot-wrap {
+      position: sticky;
+      top: 100px;
+    }
+
+    .about-headshot-img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 14px;
+      display: block;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+    }
+
+    .about-headshot-caption {
+      margin-top: 18px;
+      text-align: center;
+    }
+
+    .about-headshot-caption strong {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #FFFFFF;
+      letter-spacing: 0.01em;
+    }
+
+    .about-headshot-caption span {
+      display: block;
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.55);
+      margin-top: 4px;
+    }
+
+    @media (max-width: 900px) {
+      .about-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .about-headshot-wrap {
+        position: static;
+        max-width: 280px;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .about-cols {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .about-col {
+        padding: 32px 24px;
+      }
+    }
+
+    /* ============================================================
+       REVIEWS SECTION
+    ============================================================ */
+    #reviews {
+      background: #F4F5F7;
+      padding: 96px 24px;
+    }
+
+    .reviews-header {
+      text-align: center;
+      max-width: 1200px;
+      margin: 0 auto 52px;
+    }
+
+    .reviews-track {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      gap: 24px;
+      overflow-x: auto;
+      padding-bottom: 12px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+      scrollbar-color: #E2E5EA transparent;
+    }
+
+    .reviews-track::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    .reviews-track::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .reviews-track::-webkit-scrollbar-thumb {
+      background: #E2E5EA;
+      border-radius: 4px;
+    }
+
+    .review-card {
+      min-width: 340px;
+      max-width: 400px;
+      background: #FFFFFF;
+      border-radius: 12px;
+      padding: 28px 30px;
+      box-shadow: 0 2px 14px rgba(27, 58, 107, 0.07);
+      scroll-snap-align: start;
+      flex-shrink: 0;
+    }
+
+    .review-stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 16px;
+    }
+
+    .review-stars svg {
+      width: 18px;
+      height: 18px;
+      fill: #2563EB;
+    }
+
+    .review-text {
+      font-size: 0.95rem;
+      line-height: 1.78;
+      color: #333;
+      margin-bottom: 22px;
+      font-style: italic;
+    }
+
+    .review-author {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: #1B3A6B;
+    }
+
+    .review-meta {
+      font-size: 0.78rem;
+      color: #888;
+      margin-top: 4px;
+    }
+
+    @media (max-width: 768px) {
+      .reviews-track {
+        flex-direction: column;
+        overflow-x: visible;
+        gap: 16px;
+      }
+
+      .review-card {
+        min-width: unset;
+        max-width: 100%;
+      }
+    }
+
+    /* ============================================================
+       QUOTE / CONTACT SECTION
+    ============================================================ */
+    #quote {
+      background: #FFFFFF;
+      padding: 96px 24px;
+    }
+
+    .quote-inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .quote-header {
+      margin-bottom: 48px;
+    }
+
+    .quote-header p.quote-sub {
+      font-size: 1.05rem;
+      color: #555;
+      line-height: 1.7;
+      margin-top: 4px;
+    }
+
+    .form-group {
+      margin-bottom: 22px;
+    }
+
+    .form-group label {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #1C1C1E;
+      margin-bottom: 8px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1.5px solid #E2E5EA;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      color: #1C1C1E;
+      background: #FFFFFF;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: #aaa;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #2563EB;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+    }
+
+    .form-group select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231C1C1E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      background-size: 18px;
+      padding-right: 44px;
+      cursor: pointer;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 126px;
+      line-height: 1.6;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .form-submit {
+      display: block;
+      width: 100%;
+      background: #2563EB;
+      color: #FFFFFF;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      margin-top: 8px;
+    }
+
+    .form-submit:hover {
+      background: #1d52d4;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+    }
+
+    @media (max-width: 560px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    #footer {
+      background: #1C1C1E;
+      color: #FFFFFF;
+      padding: 64px 24px 32px;
+    }
+
+    .footer-top {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1.2fr;
+      gap: 56px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-brand-name {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #FFFFFF;
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
+    }
+
+    .footer-tagline {
+      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.5);
+      line-height: 1.65;
+    }
+
+    .footer-col h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.45);
+      margin-bottom: 18px;
+    }
+
+    .footer-nav-list {
+      list-style: none;
+    }
+
+    .footer-nav-list li {
+      margin-bottom: 10px;
+    }
+
+    .footer-nav-list a {
+      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.7);
+      transition: color 0.2s;
+    }
+
+    .footer-nav-list a:hover {
+      color: #FFFFFF;
+    }
+
+    .footer-contact-info p,
+    .footer-contact-info a {
+      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.9;
+      display: block;
+      transition: color 0.2s;
+    }
+
+    .footer-contact-info a:hover {
+      color: #FFFFFF;
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 24px auto 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-copy {
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.35);
+    }
+
+    .footer-social a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.5);
+      transition: color 0.2s;
+    }
+
+    .footer-social a:hover {
+      color: #FFFFFF;
+    }
+
+    .footer-social svg {
+      width: 17px;
+      height: 17px;
+      fill: currentColor;
+    }
+
+    @media (max-width: 768px) {
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <header id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">Gorowsky Insurance</a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="#quote" class="nav-cta">Get a Quote</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+      <a href="#hero" class="mobile-link">Home</a>
+      <a href="#services" class="mobile-link">Services</a>
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#reviews" class="mobile-link">Reviews</a>
+      <a href="/blog/" class="mobile-link">Blog</a>
+      <a href="#quote" class="mobile-link mobile-cta">Get a Quote</a>
+    </nav>
+  </header>
+
+  <!-- ============================================================
+       HERO SECTION
+  ============================================================ -->
+  <section id="hero">
+    <div class="hero-bg" id="heroBg" role="img" aria-label="Suburban home in South Alabama"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Protecting What Matters Most in Alabama</h1>
+      <p>Independent insurance agency serving Mobile and Baldwin County for 15 years. Home, Auto, Business, and Life coverage under one roof.</p>
+      <a href="#quote" class="hero-cta">Get a Quote</a>
+    </div>
+    <a href="#trust" class="scroll-indicator" aria-label="Scroll to next section">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M19 9l-7 7-7-7"/>
+      </svg>
+    </a>
+  </section>
+
+  <!-- ============================================================
+       TRUST BAR
+  ============================================================ -->
+  <section id="trust" aria-label="Trust indicators">
+    <div class="trust-inner">
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 6v6l4 2"/>
+          </svg>
+        </div>
+        <div class="trust-text">
+          <strong>15 Years Experience</strong>
+          <span>Established and trusted</span>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <div class="trust-text">
+          <strong>Mobile and Baldwin County</strong>
+          <span>Local coverage, local knowledge</span>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+          </svg>
+        </div>
+        <div class="trust-text">
+          <strong>Free Quotes</strong>
+          <span>No obligation, no pressure</span>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div class="trust-text">
+          <strong>Personalized Coverage</strong>
+          <span>Policies built around you</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SERVICES SECTION
+  ============================================================ -->
+  <section id="services">
+    <div class="services-header reveal">
+      <p class="section-tag">What We Cover</p>
+      <h2 class="section-heading">Insurance for Every Part of Your Life</h2>
+      <p class="section-sub">Glen Gorowsky helps families and businesses across South Alabama find the right coverage at the right price.</p>
+    </div>
+    <div class="services-grid">
+      <a href="https://gorowsky-insurance.netlify.app/alabama-home-insurance/" class="service-card" data-delay="0" aria-label="Learn about Home Insurance">
+        <div class="service-photo-wrap">
+          <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&q=80" alt="A well-kept residential home" loading="lazy">
+          <div class="service-photo-label">Home Insurance</div>
+        </div>
+        <div class="service-body">
+          <p>Covers fire, theft, wind, hail, hurricane, and personal liability. Policies customized for homeowners, renters, and condo owners.</p>
+        </div>
+      </a>
+      <a href="https://gorowsky-insurance.netlify.app/alabama-auto-insurance/" class="service-card" data-delay="100" aria-label="Learn about Auto Insurance">
+        <div class="service-photo-wrap">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80" alt="A car on an open road" loading="lazy">
+          <div class="service-photo-label">Auto Insurance</div>
+        </div>
+        <div class="service-body">
+          <p>Protects you from medical bills, property damage, and legal fees after an accident. Alabama-required coverage and beyond.</p>
+        </div>
+      </a>
+      <a href="https://gorowsky-insurance.netlify.app/alabama-business-insurance/" class="service-card" data-delay="200" aria-label="Learn about Business Insurance">
+        <div class="service-photo-wrap">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" alt="A professional business office" loading="lazy">
+          <div class="service-photo-label">Business Insurance</div>
+        </div>
+        <div class="service-body">
+          <p>Commercial property coverage for landlords and business owners against fire, theft, storm damage, and liability.</p>
+        </div>
+      </a>
+      <a href="https://gorowsky-insurance.netlify.app/alabama-life-insurance/" class="service-card" data-delay="300" aria-label="Learn about Life Insurance">
+        <div class="service-photo-wrap">
+          <img src="https://images.unsplash.com/photo-1536640712-4d4c36ff0e4e?w=800&q=80" alt="A family together at home" loading="lazy">
+          <div class="service-photo-label">Life Insurance</div>
+        </div>
+        <div class="service-body">
+          <p>Customized life coverage to protect your family and give you peace of mind for the long term.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SERVICE AREA SECTION
+  ============================================================ -->
+  <section id="area">
+    <div class="area-inner">
+      <div class="area-left reveal">
+        <p class="section-tag">Coverage Area</p>
+        <h2 class="section-heading">Serving South Alabama</h2>
+        <p class="section-intro">Gorowsky Insurance has been a trusted resource for families and businesses across Mobile and Baldwin County for over 15 years. Whether you are in the heart of Mobile or settling into the growing communities along the Eastern Shore, Glen brings local expertise and personal service to every policy he writes.</p>
+      </div>
+      <div class="area-right">
+        <div class="area-county">
+          <h4>Mobile County</h4>
+          <ul id="mobileCountyList">
+            <li>Mobile</li>
+            <li>West Mobile</li>
+            <li>Eight Mile</li>
+            <li>Semmes</li>
+            <li>Theodore</li>
+            <li>Tillman's Corner</li>
+            <li>Seven Hills</li>
+          </ul>
+        </div>
+        <div class="area-county">
+          <h4>Baldwin County</h4>
+          <ul id="baldwinCountyList">
+            <li>Daphne</li>
+            <li>Spanish Fort</li>
+            <li>Fairhope</li>
+            <li>Loxley</li>
+            <li>Robertsdale</li>
+            <li>Silverhill</li>
+            <li>Summerdale</li>
+            <li>Foley</li>
+            <li>Gulf Shores</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT SECTION
+  ============================================================ -->
+  <section id="about">
+    <div class="about-header reveal">
+      <p class="section-tag">Why Choose Us</p>
+      <h2 class="section-heading">Why Choose Gorowsky Insurance</h2>
+    </div>
+    <div class="about-inner">
+      <div class="about-headshot-wrap reveal">
+        <img
+          src="https://res.cloudinary.com/dg8kvnrpj/image/upload/q_auto/f_auto/v1778013315/IMG_6008_lezebm.jpg"
+          alt="Glen Gorowsky, owner of Gorowsky Insurance"
+          class="about-headshot-img"
+          loading="lazy"
+        >
+        <div class="about-headshot-caption">
+          <strong>Glen Gorowsky</strong>
+          <span>Owner, Gorowsky Insurance LLC</span>
+        </div>
+      </div>
+      <div class="about-cols">
+        <div class="about-col reveal" data-delay="0">
+          <div class="about-col-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <div class="about-col-text">
+            <h3>Honest Advice</h3>
+            <p>Glen Gorowsky gives you straight answers on what coverage you actually need. Nothing more, nothing less. No upselling, no confusion.</p>
+          </div>
+        </div>
+        <div class="about-col reveal" data-delay="150">
+          <div class="about-col-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <div class="about-col-text">
+            <h3>Local Knowledge</h3>
+            <p>15 years covering Mobile and Baldwin County means Glen knows exactly what Alabama insurers are writing and what genuinely fits your situation.</p>
+          </div>
+        </div>
+        <div class="about-col reveal" data-delay="300">
+          <div class="about-col-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+              <path d="M12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+            </svg>
+          </div>
+          <div class="about-col-text">
+            <h3>One Point of Contact</h3>
+            <p>No call centers. No runaround. You deal directly with Glen from first quote to policy questions down the road.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       REVIEWS SECTION
+  ============================================================ -->
+  <section id="reviews">
+    <div class="reviews-header reveal">
+      <p class="section-tag">Client Reviews</p>
+      <h2 class="section-heading">What Clients Are Saying</h2>
+    </div>
+    <div class="reviews-track" id="reviewsTrack" role="list">
+      <div class="review-card" role="listitem">
+        <div class="review-stars" aria-label="5 out of 5 stars">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Immediately available and always provides the best service with honesty and integrity."</p>
+        <p class="review-author">Heather Augustin</p>
+        <p class="review-meta">Realtor, Coldwell Banker</p>
+      </div>
+      <div class="review-card" role="listitem">
+        <div class="review-stars" aria-label="5 out of 5 stars">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Glen Gorowsky went out of his way to make sure I had what I needed in my insurance policy. He is knowledgeable about what Mobile and Baldwin County insurance companies are writing and he is honest about what to offer. See Glen before you commit to an insurance policy."</p>
+        <p class="review-author">Lisa Johnson</p>
+        <p class="review-meta">CPA</p>
+      </div>
+      <div class="review-card" role="listitem">
+        <div class="review-stars" aria-label="5 out of 5 stars">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Cannot praise Gorowsky Insurance enough. We switched to them and just a few days later our roof sustained major damage and we had to file a claim. Glen has been more than helpful, always answers calls, follows up with any and all questions and made the process stress free. If you are thinking about switching look no further, Glen is your guy."</p>
+        <p class="review-author">Kimberly Yancey</p>
+        <p class="review-meta">Google Review</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       QUOTE / CONTACT SECTION
+  ============================================================ -->
+  <section id="quote">
+    <div class="quote-inner">
+      <div class="quote-header reveal">
+        <p class="section-tag">Free Quote</p>
+        <h2 class="section-heading">Get a Free Quote</h2>
+        <p class="quote-sub">Fill out the form below and Glen will be in touch within one business day.</p>
+      </div>
+      <form class="reveal" id="quoteForm" action="mailto:glen@gorowskyinsurance.com" method="post" enctype="text/plain" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="Full Name" placeholder="Jane Smith" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="Phone" placeholder="(251) 555-0100" required autocomplete="tel">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="emailAddr">Email Address</label>
+          <input type="email" id="emailAddr" name="Email" placeholder="you@example.com" required autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="coverage">Coverage Type</label>
+          <select id="coverage" name="Coverage Type" required>
+            <option value="" disabled selected>Select coverage type</option>
+            <option value="Home">Home</option>
+            <option value="Auto">Auto</option>
+            <option value="Business">Business</option>
+            <option value="Life">Life</option>
+            <option value="Multiple">Multiple</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message / Notes</label>
+          <textarea id="message" name="Message" placeholder="Tell us a bit about what you are looking for..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Request My Free Quote</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand-name">Gorowsky Insurance, LLC</p>
+        <p class="footer-tagline">Independent insurance agency serving Mobile and Baldwin County since 2009.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-nav-list">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#area">Service Area</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#quote">Get a Quote</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-info">
+          <p>27154-A Pollard Road</p>
+          <p>Daphne, AL 36526</p>
+          <a href="tel:+12513672599">(251) 367-2599</a>
+          <a href="mailto:glen@gorowskyinsurance.com">glen@gorowskyinsurance.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">2025 Gorowsky Insurance, LLC. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/gorowskyinsurance" target="_blank" rel="noopener noreferrer" aria-label="Gorowsky Insurance on Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          Facebook
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ============================================================
+       NAV SCROLL SHADOW
+    ============================================================ */
+    const nav = document.getElementById('nav');
+
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    }, { passive: true });
+
+    /* ============================================================
+       HAMBURGER MENU
+    ============================================================ */
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', function() {
+      const isOpen = hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    document.querySelectorAll('.mobile-link').forEach(function(link) {
+      link.addEventListener('click', function() {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 768) {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    /* ============================================================
+       PARALLAX HERO
+    ============================================================ */
+    const heroBg = document.getElementById('heroBg');
+    const heroSection = document.getElementById('hero');
+
+    window.addEventListener('scroll', function() {
+      const scrollY = window.scrollY;
+      const heroH = heroSection.offsetHeight;
+      if (scrollY <= heroH) {
+        heroBg.style.transform = 'translateY(' + (scrollY * 0.4) + 'px)';
+      }
+    }, { passive: true });
+
+    /* ============================================================
+       INTERSECTION OBSERVER - GENERAL REVEAL
+    ============================================================ */
+    const revealObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var el = entry.target;
+          var delay = el.dataset.delay ? parseInt(el.dataset.delay, 10) : 0;
+          setTimeout(function() {
+            el.classList.add('visible');
+          }, delay);
+          revealObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      revealObserver.observe(el);
+    });
+
+    /* ============================================================
+       TRUST BAR STAGGER
+    ============================================================ */
+    var trustObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var items = entry.target.querySelectorAll('.trust-item');
+          items.forEach(function(item, i) {
+            setTimeout(function() {
+              item.classList.add('visible');
+            }, i * 100);
+          });
+          trustObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    var trustInner = document.querySelector('.trust-inner');
+    if (trustInner) trustObserver.observe(trustInner);
+
+    /* ============================================================
+       SERVICE CARDS STAGGER
+    ============================================================ */
+    var cardObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var delay = entry.target.dataset.delay ? parseInt(entry.target.dataset.delay, 10) : 0;
+          setTimeout(function() {
+            entry.target.classList.add('visible');
+          }, delay);
+          cardObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.service-card').forEach(function(card) {
+      cardObserver.observe(card);
+    });
+
+    /* ============================================================
+       SERVICE AREA LIST STAGGER
+    ============================================================ */
+    var listObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var items = entry.target.querySelectorAll('li');
+          items.forEach(function(item, i) {
+            setTimeout(function() {
+              item.classList.add('visible');
+            }, i * 70);
+          });
+          listObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.area-county').forEach(function(county) {
+      listObserver.observe(county);
+    });
+
+    /* ============================================================
+       GOOGLE PLACES API - REVIEWS
+       To enable: replace GOOGLE_PLACES_API_KEY with a valid key
+       that has the Places API enabled in Google Cloud Console.
+    ============================================================ */
+    var GOOGLE_PLACES_API_KEY = '';
+
+    if (GOOGLE_PLACES_API_KEY) {
+      var placesScript = document.createElement('script');
+      placesScript.src = 'https://maps.googleapis.com/maps/api/js?key=' + GOOGLE_PLACES_API_KEY + '&libraries=places&callback=initPlaces';
+      placesScript.async = true;
+      placesScript.defer = true;
+      document.head.appendChild(placesScript);
+    }
+
+    window.initPlaces = function() {
+      var service = new google.maps.places.PlacesService(document.createElement('div'));
+      service.findPlaceFromQuery({
+        query: 'Gorowsky Insurance LLC 27154-A Pollard Road Daphne AL',
+        fields: ['place_id']
+      }, function(results, status) {
+        if (status === google.maps.places.PlacesServiceStatus.OK && results[0]) {
+          service.getDetails({
+            placeId: results[0].place_id,
+            fields: ['reviews']
+          }, function(place, detailStatus) {
+            if (detailStatus === google.maps.places.PlacesServiceStatus.OK && place.reviews && place.reviews.length > 0) {
+              renderGoogleReviews(place.reviews);
+            }
+          });
+        }
+      });
+    };
+
+    function buildStars(rating) {
+      return Array.from({ length: 5 }, function(_, i) {
+        var color = i < rating ? '#2563EB' : '#E2E5EA';
+        return '<svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:' + color + '" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>';
+      }).join('');
+    }
+
+    function renderGoogleReviews(reviews) {
+      var track = document.getElementById('reviewsTrack');
+      track.innerHTML = '';
+      reviews.forEach(function(review) {
+        var card = document.createElement('div');
+        card.className = 'review-card';
+        card.setAttribute('role', 'listitem');
+        card.innerHTML =
+          '<div class="review-stars" aria-label="' + review.rating + ' out of 5 stars">' + buildStars(review.rating) + '</div>' +
+          '<p class="review-text">"' + review.text + '"</p>' +
+          '<p class="review-author">' + review.author_name + '</p>' +
+          '<p class="review-meta">' + review.relative_time_description + '</p>';
+        track.appendChild(card);
+      });
+    }
+  </script>
+
+</body>
+</html>
