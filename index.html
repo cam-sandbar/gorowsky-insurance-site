@@ -1439,7 +1439,9 @@
         <h2 class="section-heading">Get a Free Quote</h2>
         <p class="quote-sub">Fill out the form below and Glen will be in touch within one business day.</p>
       </div>
-      <form class="reveal" id="quoteForm" action="mailto:glen@gorowskyinsurance.com" method="post" enctype="text/plain" novalidate>
+      <form class="reveal" id="quoteForm" name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="bot-field" style="display:none;">
+        <input type="hidden" name="form-name" value="quote">
         <div class="form-row">
           <div class="form-group">
             <label for="fullName">Full Name</label>
